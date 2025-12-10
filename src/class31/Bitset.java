@@ -8,6 +8,7 @@ package class31;
  */
 
 /**
+ * 设计位图
  * Bitset(int size)
  * void add(int num)
  * void remove(int num)

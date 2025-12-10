@@ -16,18 +16,26 @@ public class partitionList {
 
     }
 
+    // 传入数组生成链表
+    public static ListNode createList(int... values) {
+        if (values.length == 0) return null;
+
+        ListNode dummy = new ListNode(-1);
+        ListNode current = dummy;
+
+        for (int val : values) {
+            current.next = new ListNode(val);
+            current = current.next;
+        }
+
+        return dummy.next;
+    }
+
     public static void main(String[] args) {
         // 正确创建链表的方式
-        ListNode head = new ListNode(6);
-        head.next = new ListNode(5);
-        head.next.next = new ListNode(3);
-        head.next.next.next = new ListNode(4);
-        head.next.next.next.next = new ListNode(2);
-        head.next.next.next.next.next = new ListNode(1);
-        head.next.next.next.next.next.next = new ListNode(1);
-        head.next.next.next.next.next.next.next = new ListNode(7);
+        ListNode head = createList(6, 5, 3, 4, 2, 1, 1, 7);
 
-// 假设 partition 方法已经实现
+        // 假设 partition 方法已经实现
         ListNode partition = partition(head, 4);
 
         while (partition != null)

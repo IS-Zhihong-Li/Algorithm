@@ -1,4 +1,4 @@
-package class35_pp;
+package class35_DS;
 
 /**
  * @author : lizh
@@ -12,4 +12,7 @@ package class35_pp;
 public class SetAllHashMap {
     // 引入时间戳, 每次修改数据时, 时间戳随之改变,
     // 引入变量使执行setAll覆写数据时, 记录此时时间戳, 当访问数据小于该时间戳时, 值为setAll的值
+
+
+
 }

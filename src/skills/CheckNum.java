@@ -8,6 +8,7 @@ package skills;
  * 为了测试优化解是否可行,先写出一个稳定可行的暴力解,再使用对数器进行比对,下面是一个简单的测试样例
  */
 public class CheckNum {
+
     public static void main(String[] args) {
         int n = 10;//数组长度
         int v = 200;//数字范围
@@ -15,6 +16,7 @@ public class CheckNum {
         //测试样例
         int[] arr1 = randomArray(n, v);
         int[] arr2 = copyArray(arr1);
+        //RadixSort.Sort();
         System.out.println(checkArray(arr1, arr2));
     }
 

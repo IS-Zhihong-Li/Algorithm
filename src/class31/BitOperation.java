@@ -7,7 +7,7 @@ package class31;
  * @version: 1.0
  */
 
-
+// (n & -n) 获取二进制串中最右边的1
 public class BitOperation {
 
     // 判断是否2的幂次

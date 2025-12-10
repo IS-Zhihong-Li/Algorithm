@@ -1,4 +1,4 @@
-package search;
+package class1;
 
 /**
  * @author : lizh

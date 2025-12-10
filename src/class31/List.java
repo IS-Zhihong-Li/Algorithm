@@ -1,7 +1,5 @@
 package class31;
 
-import linked.reverseList;
-
 /**
  * @author : lizh
  * @date: 2025/9/17 - 09 - 17 - 19:01
@@ -74,7 +72,7 @@ public class List {
     }
 
 
-    // 2.每k个节点为一组翻转链表
+    // 2.每k个节点为一组翻转链表(困难)
     // https://leetcode.cn/problems/reverse-nodes-in-k-group/
     class ReverseListByGroup {
         // 容器化:装填进数组,翻转后再组成链表
@@ -124,8 +122,9 @@ public class List {
             //         这样就可以直接从原链表获取数据, 复制完成之后再分离链表
 
 
-            int  = Node()
 
+
+            return null;
         }
     }
 

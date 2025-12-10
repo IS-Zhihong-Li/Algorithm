@@ -6,7 +6,10 @@ package class21;
  * @Description: class21
  * @version: 1.0
  */
-//https://leetcode.cn/problems/reverse-pairs/
+
+// 翻转对(困难)
+// 给定一个数组 nums ，如果 i < j 且 nums[i] > 2*nums[j] 我们就将 (i, j) 称作一个重要翻转对。
+// https://leetcode.cn/problems/reverse-pairs/
 class ReversePairs {
     public static int MAX = 50001;
 
@@ -29,6 +32,7 @@ class ReversePairs {
     }
 
 
+    // 使用归并有效优化时间复杂度
     public static int merge(int[] arr, int l, int m, int r) {
         int ans = 0;
         for (int i = l, j = m + 1; i <= m; i++) {

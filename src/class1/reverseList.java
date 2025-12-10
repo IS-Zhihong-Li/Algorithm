@@ -1,4 +1,4 @@
-package linked;
+package class1;
 
 /**
  * @author : lizh

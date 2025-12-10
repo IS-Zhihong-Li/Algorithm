@@ -1,0 +1,34 @@
+代码编辑
+ctrl + backspace        删除前面所有空格
+ctrl + shift + J        将下一行合并到此行
+ctrl + shift + ] / [    框中区域前/后半部分
+alt + 1                 将焦点集中到文件目录, Esc返回
+ctrl + shift + PgUp/Dn  选中光标前/后所有
+ctrl + +/-              展开/折叠代码块
+ctrl + shift + V        内置剪贴板
+ctrl + alt + shift + J  选中所有相同词
+alt + shift + insert    列选择模式, 光标可无视页面内容移动
+ctrl + shift + U        选中内容切换大小写
+alt + F7                查找用法
+
+导航
+ctrl + E                最近打开文件
+ctrl + F12              当前文件结构
+ctrl + shift + F        全项目搜索
+
+重构优化
+shift + F6              重命名
+ctrl + alt + V          提取为变量
+             M          方法
+             C          常数
+             P          参数
+shift + F10             运行
+shift + F9              调试
+F8                      步过
+F7                      步入
+F8 + shift              步出
+F9                      继续执行
+
+版本控制
+ctrl + K                Git提交
+
