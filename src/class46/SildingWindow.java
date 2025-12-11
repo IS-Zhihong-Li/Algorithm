@@ -53,4 +53,25 @@ public class SildingWindow {
             return max;
         }
     }
+
+    // 最小覆盖子串
+    // https://leetcode.cn/problems/minimum-window-substring/
+
+
+    // 加油站
+    // https://leetcode.cn/problems/gas-station/
+
+
+    // 替换子串得到平衡字符串
+    // https://leetcode.cn/problems/replace-the-substring-for-balanced-string/
+
+
+    // K个不同整数的子数组
+    // https://leetcode.cn/problems/subarrays-with-k-different-integers/
+
+
+    // 至少有K个重复字符的最长子串
+    // https://leetcode.cn/problems/longest-substring-with-at-least-k-repeating-characters/
+
+
 }

@@ -36,7 +36,6 @@ public class Recursion {
         }
     }
 
-
     // 返回所有不重复子集
     // https://leetcode.cn/problems/subsets-ii/
     class SubsetsWithDup {
@@ -143,7 +142,7 @@ public class Recursion {
     }
 
     // 递归函数逆序栈
-    // 核心思想: 可以利用开辟栈出现的空间
+    // 核心思想: 可以利用开辟递归栈出现的空间
     class ReverseStackWithRecursive{
         public void reverse(Stack<Integer> stack){
             if(stack.isEmpty()){
@@ -168,19 +167,90 @@ public class Recursion {
         }
     }
 
-
     // 递归函数排序栈
-    //
     class SortStackWithRecursive{
 
+        // 排序
+        public void sort(Stack<Integer> stack){
+            int deep = deep(stack);
+            while(deep > 0){
+                int max = max(stack, deep);
+                int times = times(stack, deep, max);
+                down(stack, deep, max, times);
+                deep -= times;
+            }
+        }
+
+        // 查询栈深度
+        public int deep(Stack<Integer> stack){
+            if(stack.isEmpty()){
+                return 0;
+            }else{
+                int num = stack.pop();
+                int deep = deep(stack) + 1;
+                stack.push(num);
+                return deep;
+            }
+        }
+
+        // 查询最大值
+        public int max(Stack<Integer> stack, int deep){
+            if(deep == 0){
+                return Integer.MIN_VALUE;
+            }else {
+                int num = stack.pop();
+                int max = max(stack, deep - 1);
+                max = Math.max(num, max);
+                stack.push(num);
+                return max;
+            }
+        }
+
+        // 查询最大值出现次数
+        public int times(Stack<Integer> stack, int deep, int max){
+            if(deep == 0){
+                return 0;
+            }else{
+                int num = stack.pop();
+                int times = times(stack, deep - 1, max);
+                times += (num == max ? 1 : 0);
+                stack.push(num);
+                return times;
+            }
+        }
+
+        // 所有最大值沉底
+        public void down(Stack<Integer> stack, int deep, int max, int times){
+            if(deep == 0){
+                for (int i = 0; i < times; i++) {
+                    stack.push(max);
+                }
+            }else{
+                int num = stack.pop();
+                down(stack, deep - 1, max, times);
+                if(num != max){
+                    stack.push(num);
+                }
+            }
+        }
     }
 
     // 打印汉诺塔问题
     class TowerOfHanoi{
+        public void hanoi(int num){
+            if(num > 0){
+                f(num, "左", "右", "中" );
+            }
+        }
 
-
-
+        public void f(int num, String from, String to, String other){
+            if(num == 1){
+                System.out.println("将圆盘1从" + from + "移动到" + to);
+            }else {
+                f(num - 1, from, other, to);// 将N-1的圆盘移动到other上
+                System.out.println("将圆盘" + num + "从" + from + "移动到" + to);// 这里的num是最大的盘的编号, 将它移动到to上
+                f(num - 1, other, to, from);// 将N-1的圆盘从other移动到to上
+            }
+        }
     }
-
-
 }
